@@ -1,0 +1,2772 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Documentation - Color Admin</title>
+    <!-- Bootstrap styles -->
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+    <link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;Color Admin Responsive Admin Template&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v1.9</p>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well">
+					<p>
+						<strong>
+							Created: 18/April/2014<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+			
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#htmlStructure"><i class="icon-chevron-right"></i>HTML Structure</a></li>
+					<li><a href="#page-beginning"><i class="icon-chevron-right"></i>Beginning of Page</a></li>
+					<li><a href="#page-head"><i class="icon-chevron-right"></i>Page Head</a></li>
+					<li><a href="#page-top-menu"><i class="icon-chevron-right"></i>Page Top Menu</a></li>
+					<li><a href="#page-sidebar"><i class="icon-chevron-right"></i>Page Sidebar</a></li>
+					<li><a href="#page-content"><i class="icon-chevron-right"></i>Page Content</a></li>
+					<li><a href="#panel"><i class="icon-chevron-right"></i>Panel Box</a></li>
+					<li><a href="#panel-theme"><i class="icon-chevron-right"></i>Panel Theme</a></li>
+					<li><a href="#page-end"><i class="icon-chevron-right"></i>End of Page (Javascripts)</a></li>
+					<li><a href="#page-theme-options"><i class="icon-chevron-right"></i>Page Theme Options</a></li>
+					<li><a href="#page-options"><i class="icon-chevron-right"></i>Page Options <span class="label">NEW</span></a></li>
+					<li><a href="#page-less"><i class="icon-chevron-right"></i>LESS <span class="label">NEW</span></a></li>
+					<li><a href="#page-ajax"><i class="icon-chevron-right"></i>AJAX <span class="label">NEW</span></a></li>
+					<li><a href="#angular-js"><i class="icon-chevron-right"></i>Angular JS <span class="label">NEW</span></a></li>
+					<li><a href="#plugins-resources"><i class="icon-chevron-right"></i>Plugins & Resources</a></li>
+					<li><a href="#references"><i class="icon-chevron-right"></i>References</a></li>
+					<li><a href="#change-log"><i class="icon-chevron-right"></i>Change Log</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This template can be used as an fluid layout with a max of 12 columns next to each other. The general template structure is the same throughout the template. Here is the general structure.</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-loader --&gt;
+&lt;div id="page-loader" class="fade in"&gt;&lt;span class="spinner"&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!-- end #page-loader --&gt;
+
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade page-sidebar-fixed page-header-fixed"&gt;
+  &lt;!-- begin #header --&gt;
+  &lt;div id="header" class="header navbar navbar-default navbar-fixed-top"&gt;
+    &lt;!-- Header Here --&gt;
+  &lt;/div&gt;
+  &lt;!-- end #header --&gt;
+  
+  &lt;!-- begin #sidebar --&gt;
+  &lt;div id="sidebar" class="sidebar"&gt;
+    &lt;!-- Sidebar Here --&gt;
+  &lt;/div&gt;
+  &lt;div class="sidebar-bg"&gt;&lt;/div&gt;
+  &lt;!-- end #sidebar --&gt;
+  
+  &lt;!-- begin #content --&gt;
+  &lt;div id="content" class="content"&gt;
+    &lt;!-- Content Here --&gt;
+  &lt;/div&gt;
+  &lt;!-- end #content --&gt;
+  
+  &lt;!-- begin #footer --&gt;
+  &lt;div id="footer" class="footer"&gt;
+    &lt;!-- Footer Here --&gt;
+  &lt;/div&gt;
+  &lt;!-- end #footer --&gt;
+  
+  &lt;!-- begin scroll to top btn --&gt;
+  &lt;a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"&gt;
+    &lt;i class="fa fa-angle-up"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;!-- end scroll to top btn --&gt;
+&lt;/div&gt;
+&lt;!-- end page container --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-beginning"><strong>B) Beginning of Page</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Below code is used to detect the internet explorer for browser compatibility & styling setting usage.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt; &lt;html lang="en" class="ie8"&gt; &lt;![endif]--&gt;
+&lt;!--[if !IE]&gt;&lt;!--&gt;
+&lt;html lang="en"&gt;
+&lt;!--&lt;![endif]--&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-head"><strong>C) Page Head</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Page head contains metadata, javascript and css files:</p>
+<pre class="prettyprint linenums">
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;title&gt;Color Admin | Dashboard&lt;/title&gt;
+  &lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /&gt;
+  &lt;meta content="" name="description" /&gt;
+  &lt;meta content="" name="author" /&gt;
+  
+  &lt;!-- ================== BEGIN BASE CSS STYLE ================== --&gt;
+  &lt;link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" /&gt;
+  &lt;link href="assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" rel="stylesheet" /&gt;
+  &lt;link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" /&gt;
+  &lt;link href="assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" /&gt;
+  &lt;link href="assets/css/animate.min.css" rel="stylesheet" /&gt;
+  &lt;link href="assets/css/style.min.css" rel="stylesheet" /&gt;
+  &lt;link href="assets/css/style-responsive.min.css" rel="stylesheet" /&gt;
+  &lt;link href="assets/css/theme/default.css" rel="stylesheet" id="theme" /&gt;
+  &lt;!-- ================== END BASE CSS STYLE ================== --&gt;
+  
+  &lt;!-- ================== BEGIN PAGE LEVEL STYLE ================== --&gt;
+  &lt;link href="assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" /&gt;
+  &lt;link href="assets/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" /&gt;
+  &lt;link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" /&gt;
+    &lt;link href="assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" /&gt;  
+  &lt;!-- ================== END PAGE LEVEL STYLE ================== --&gt;
+&lt;/head&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-top-menu"><strong>D) Top Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- begin #header --&gt;
+&lt;div id="header" class="header navbar navbar-default navbar-fixed-top"&gt;
+  &lt;!-- begin container-fluid --&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;!-- begin mobile sidebar expand / collapse button --&gt;
+    &lt;div class="navbar-header"&gt;
+      &lt;a href="javascript:;" class="navbar-brand"&gt;&lt;span class="navbar-logo"&gt;&lt;/span&gt; Color Admin&lt;/a&gt;
+      &lt;button type="button" class="navbar-toggle" data-click="sidebar-toggled"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!-- end mobile sidebar expand / collapse button --&gt;
+    
+    &lt;!-- begin header navigation right --&gt;
+    &lt;ul class="nav navbar-nav navbar-right"&gt;
+      &lt;li&gt;
+        &lt;form class="navbar-form full-width hidden-xs"&gt;
+          &lt;div class="form-group"&gt;
+            &lt;input type="text" class="form-control" placeholder="Enter keyword" /&gt;
+            &lt;button type="submit" class="btn btn-search"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/li&gt;
+      &lt;li class="dropdown"&gt;
+        &lt;a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle f-s-14"&gt;
+          &lt;i class="fa fa-bell-o"&gt;&lt;/i&gt;
+          &lt;span class="label"&gt;5&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class="dropdown-menu media-list pull-right animated fadeInDown"&gt;
+          &lt;li class="dropdown-header"&gt;Notifications (5)&lt;/li&gt;
+          &lt;li class="media"&gt;
+            &lt;a href="javascript:;"&gt;
+              &lt;div class="pull-left media-object bg-red"&gt;&lt;i class="fa fa-bug"&gt;&lt;/i&gt;&lt;/div&gt;
+              &lt;div class="media-body"&gt;
+                &lt;h6 class="media-heading"&gt;Server Error Reports&lt;/h6&gt;
+                &lt;div class="text-muted"&gt;3 minutes ago&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="media"&gt;
+            &lt;a href="javascript:;"&gt;
+              &lt;div class="pull-left"&gt;&lt;img src="assets/img/user-1.jpg" class="media-object" alt="" /&gt;&lt;/div&gt;
+              &lt;div class="media-body"&gt;
+                &lt;h6 class="media-heading"&gt;John Smith&lt;/h6&gt;
+                &lt;p&gt;Quisque pulvinar tellus sit amet sem scelerisque tincidunt.&lt;/p&gt;
+                &lt;div class="text-muted"&gt;25 minutes ago&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="media"&gt;
+            &lt;a href="javascript:;"&gt;
+              &lt;div class="pull-left"&gt;&lt;img src="assets/img/user-2.jpg" class="media-object" alt="" /&gt;&lt;/div&gt;
+              &lt;div class="media-body"&gt;
+                &lt;h6 class="media-heading"&gt;Olivia&lt;/h6&gt;
+                &lt;p&gt;Quisque pulvinar tellus sit amet sem scelerisque tincidunt.&lt;/p&gt;
+                &lt;div class="text-muted"&gt;35 minutes ago&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="media"&gt;
+            &lt;a href="javascript:;"&gt;
+              &lt;div class="pull-left media-object bg-green"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/div&gt;
+              &lt;div class="media-body"&gt;
+                &lt;h6 class="media-heading"&gt; New User Registered&lt;/h6&gt;
+                &lt;div class="text-muted"&gt;1 hour ago&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="media"&gt;
+            &lt;a href="javascript:;"&gt;
+              &lt;div class="pull-left media-object bg-blue"&gt;&lt;i class="fa fa-envelope"&gt;&lt;/i&gt;&lt;/div&gt;
+              &lt;div class="media-body"&gt;
+                &lt;h6 class="media-heading"&gt; New Email From John&lt;/h6&gt;
+                &lt;div class="text-muted"&gt;2 hour ago&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="dropdown-footer text-center"&gt;
+            &lt;a href="javascript:;"&gt;View more&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class="dropdown navbar-user"&gt;
+        &lt;a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"&gt;
+          &lt;img src="assets/img/user-11.jpg" alt="" /&gt; 
+          &lt;span class="hidden-xs"&gt;Adam Schwartz&lt;/span&gt; &lt;b class="caret"&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class="dropdown-menu animated fadeInLeft"&gt;
+          &lt;li class="arrow"&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="javascript:;"&gt;Edit Profile&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="javascript:;"&gt;&lt;span class="badge badge-danger pull-right"&gt;2&lt;/span&gt; Inbox&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="javascript:;"&gt;Calendar&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="javascript:;"&gt;Setting&lt;/a&gt;&lt;/li&gt;
+          &lt;li class="divider"&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="javascript:;"&gt;Log Out&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- end header navigation right --&gt;
+  &lt;/div&gt;
+  &lt;!-- end container-fluid --&gt;
+&lt;/div&gt;
+&lt;!-- end #header --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-sidebar"><strong>E) Sidebar</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- begin #sidebar --&gt;
+&lt;div id="sidebar" class="sidebar"&gt;
+  &lt;!-- begin sidebar scrollbar --&gt;
+  &lt;div data-scrollbar="true" data-height="100%"&gt;
+    &lt;!-- begin sidebar user --&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="nav-profile"&gt;
+        &lt;div class="image"&gt;
+          &lt;a href="javascript:;"&gt;&lt;img src="assets/img/user-11.jpg" alt="" /&gt;&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="info"&gt;
+          Sean Ngu
+          &lt;small&gt;Front end developer&lt;/small&gt;
+        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- end sidebar user --&gt;
+    &lt;!-- begin sidebar nav --&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="nav-header"&gt;Navigation&lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href="index.html"&gt;&lt;i class="fa fa-laptop"&gt;&lt;/i&gt; &lt;span&gt;Dashboard&lt;/span&gt;&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href="inbox.html"&gt;
+          &lt;span class="badge pull-right"&gt;10&lt;/span&gt;
+          &lt;i class="fa fa-inbox"&gt;&lt;/i&gt; &lt;span&gt;Inbox&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="has-sub"&gt;
+        &lt;a href="javascript:;"&gt;
+          &lt;i class="fa fa-suitcase"&gt;&lt;/i&gt; 
+          &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+          &lt;span&gt;UI Elements&lt;/span&gt; 
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li&gt;&lt;a href="ui_general.html"&gt;General&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="ui_typography.html"&gt;Typography&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="ui_tabs_accordions.html"&gt;Tabs & Accordions&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="ui_modal_notification.html"&gt;Modal & Notification&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="ui_widget_boxes.html"&gt;Widget Boxes&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="ui_media_object.html"&gt;Media Object&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="ui_buttons.html"&gt;Buttons&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="ui_icons.html"&gt;Icons&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class="has-sub"&gt;
+        &lt;a href="javascript:;"&gt;
+          &lt;i class="fa fa-file-o"&gt;&lt;/i&gt; 
+          &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+          &lt;span&gt;Form Stuff&lt;/span&gt; 
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li&gt;&lt;a href="form_elements.html"&gt;Form Elements&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="form_plugins.html"&gt;Form Plugins&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="form_validation.html"&gt;Form Validation&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="form_wizards.html"&gt;Wizards&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="form_wysiwyg.html"&gt;WYSIWYG&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class="has-sub"&gt;
+        &lt;a href="javascript:;"&gt;
+          &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+          &lt;i class="fa fa-th"&gt;&lt;/i&gt; 
+          &lt;span&gt;Tables&lt;/span&gt; 
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li&gt;&lt;a href="table_basic.html"&gt;Basic Tables&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="table_manage.html"&gt;Managed Tables&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="charts.html"&gt;&lt;i class="fa fa-signal"&gt;&lt;/i&gt; &lt;span&gt;Charts&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="calendar.html"&gt;&lt;i class="fa fa-calendar"&gt;&lt;/i&gt; &lt;span&gt;Calendar&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="has-sub"&gt;
+        &lt;a href="javascript:;"&gt;
+          &lt;i class="fa fa-map-marker"&gt;&lt;/i&gt;
+          &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+          &lt;span&gt;Map&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li&gt;&lt;a href="map_vector.html"&gt;Vector Map&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="map_google.html"&gt;Google Map&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="gallery.html"&gt;&lt;i class="fa fa-camera"&gt;&lt;/i&gt; &lt;span&gt;Gallery&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="has-sub active"&gt;
+        &lt;a href="javascript:;"&gt;
+          &lt;i class="fa fa-cogs"&gt;&lt;/i&gt;
+          &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+          &lt;span&gt;Page Options&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li class="active"&gt;&lt;a href="page_blank.html"&gt;Blank Page&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="page_with_footer.html"&gt;Page with Footer&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="page_without_sidebar.html"&gt;Page without Sidebar&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="page_with_right_sidebar.html"&gt;Page with Right Sidebar&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="page_with_minified_sidebar.html"&gt;Page with Minified Sidebar&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class="has-sub"&gt;
+        &lt;a href="javascript:;"&gt;
+          &lt;i class="fa fa-gift"&gt;&lt;/i&gt;
+          &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+          &lt;span&gt;Extra&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li&gt;&lt;a href="extra_search_results.html"&gt;Search Results&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="extra_invoice.html"&gt;Invoice&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="extra_404_error.html"&gt;404 Error Page&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="extra_login.html"&gt;Login&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class="has-sub"&gt;
+        &lt;a href="javascript:;"&gt;
+          &lt;i class="fa fa-align-left"&gt;&lt;/i&gt; 
+          &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+          &lt;span&gt;Menu Level&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class="sub-menu"&gt;
+          &lt;li class="has-sub"&gt;
+            &lt;a href="javascript:;"&gt;
+              &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+              Menu 1.1
+            &lt;/a&gt;
+            &lt;ul class="sub-menu"&gt;
+              &lt;li class="has-sub"&gt;
+                &lt;a href="javascript:;"&gt;
+                  &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+                  Menu 2.1
+                &lt;/a&gt;
+                &lt;ul class="sub-menu"&gt;
+                  &lt;li&gt;&lt;a href="javascript:;"&gt;Menu 3.1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="javascript:;"&gt;Menu 3.2&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;&lt;a href="javascript:;"&gt;Menu 2.2&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="javascript:;"&gt;Menu 2.3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href="javascript:;"&gt;Menu 1.2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="javascript:;"&gt;Menu 1.3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;!-- begin sidebar minify button --&gt;
+      &lt;li&gt;&lt;a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"&gt;&lt;i class="fa fa-angle-double-left"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;!-- end sidebar minify button --&gt;
+    &lt;/ul&gt;
+    &lt;!-- end sidebar nav --&gt;
+  &lt;/div&gt;
+  &lt;!-- end sidebar scrollbar --&gt;
+&lt;/div&gt;
+&lt;div class="sidebar-bg"&gt;&lt;/div&gt;
+&lt;!-- end #sidebar --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-content"><strong>F) Page Content</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Page content consists of page title, breadcrumbs and page's main body. HTML code of Content container as shown below:
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin #content --&gt;
+&lt;div id="content" class="content"&gt;
+  &lt;!-- begin breadcrumb --&gt;
+  &lt;ol class="breadcrumb pull-right"&gt;
+    &lt;li&gt;&lt;a href="javascript:;"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="javascript:;"&gt;Page Options&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;Blank Page&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;!-- end breadcrumb --&gt;
+  &lt;!-- begin page-header --&gt;
+  &lt;h1 class="page-header"&gt;Blank Page &lt;small&gt;header small text goes here...&lt;/small&gt;&lt;/h1&gt;
+  &lt;!-- end page-header --&gt;
+  
+  &lt;!-- Page Content Here --&gt;  
+&lt;/div&gt;
+&lt;!-- end #content --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="panel"><strong>G) Panel Box</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Widget Box used for separate the content clearly by section.
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin panel --&gt;
+&lt;div class="panel panel-inverse"&gt;
+  &lt;div class="panel-heading"&gt;
+    &lt;div class="panel-heading-btn"&gt;
+      &lt;a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"&gt;&lt;i class="fa fa-expand"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"&gt;&lt;i class="fa fa-repeat"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"&gt;&lt;i class="fa fa-minus"&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;h4 class="panel-title"&gt;Panel Title here&lt;/h4&gt;
+  &lt;/div&gt;
+  &lt;div class="panel-body"&gt;
+    Panel Content Here
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end panel --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="panel-theme"><strong>H) Panel Theme</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Panel Theme used to customize the overall layout options.
+						</p>
+<pre class="prettyprint linenums">
+&lt;!-- begin theme-panel --&gt;
+&lt;div class="theme-panel"&gt;
+  &lt;a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"&gt;
+    &lt;i class="fa fa-cog"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+  &lt;div class="theme-panel-content"&gt;
+    &lt;h5 class="m-t-0"&gt;Color Theme&lt;/h5&gt;
+    &lt;ul class="theme-list clearfix"&gt;
+      &lt;li class="active"&gt;&lt;a href="javascript:;" class="bg-green" data-theme="default" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Default"&gt;&nbsp;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascript:;" class="bg-red" data-theme="red" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red"&gt;&nbsp;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascript:;" class="bg-blue" data-theme="blue" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Blue"&gt;&nbsp;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascript:;" class="bg-purple" data-theme="purple" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple"&gt;&nbsp;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascript:;" class="bg-orange" data-theme="orange" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange"&gt;&nbsp;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="javascript:;" class="bg-black" data-theme="black" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Black"&gt;&nbsp;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="divider"&gt;&lt;/div&gt;
+    &lt;div class="row m-t-10"&gt;
+      &lt;div class="col-md-5 control-label double-line"&gt;Header Styling&lt;/div&gt;
+      &lt;div class="col-md-7"&gt;
+        &lt;select name="header-styling" class="form-control input-sm"&gt;
+          &lt;option value="1"&gt;default&lt;/option&gt;
+          &lt;option value="2"&gt;inverse&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row m-t-10"&gt;
+      &lt;div class="col-md-5 control-label"&gt;Header&lt;/div&gt;
+      &lt;div class="col-md-7"&gt;
+        &lt;select name="header-fixed" class="form-control input-sm"&gt;
+          &lt;option value="1"&gt;fixed&lt;/option&gt;
+          &lt;option value="2"&gt;default&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row m-t-10"&gt;
+      &lt;div class="col-md-5 control-label double-line"&gt;Sidebar Styling&lt;/div&gt;
+      &lt;div class="col-md-7"&gt;
+        &lt;select name="sidebar-styling" class="form-control input-sm"&gt;
+          &lt;option value="1"&gt;default&lt;/option&gt;
+          &lt;option value="2"&gt;grid&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row m-t-10"&gt;
+      &lt;div class="col-md-5 control-label"&gt;Sidebar&lt;/div&gt;
+      &lt;div class="col-md-7"&gt;
+        &lt;select name="sidebar-fixed" class="form-control input-sm"&gt;
+          &lt;option value="1"&gt;fixed&lt;/option&gt;
+          &lt;option value="2"&gt;default&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end theme-panel --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-end"><strong>I) End of Page (Javascript)</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Javascript files loaded in the end of page. This will reduce page load time.
+						</p>
+<pre class="prettyprint linenums">
+  &lt;!-- ================== BEGIN BASE JS ================== --&gt;
+  &lt;script src="assets/plugins/jquery/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/jquery-ui/ui/minified/jquery-ui.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;!--[if lt IE 9]&gt;
+    &lt;script src="assets/crossbrowserjs/html5shiv.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/crossbrowserjs/respond.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/crossbrowserjs/excanvas.min.js"&gt;&lt;/script&gt;
+  &lt;![endif]--&gt;
+  &lt;script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/jquery-cookie/jquery.cookie.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END BASE JS ================== --&gt;
+  
+  &lt;!-- ================== BEGIN PAGE LEVEL JS ================== --&gt;
+  &lt;script src="assets/plugins/gritter/js/jquery.gritter.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.time.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.resize.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/flot/jquery.flot.pie.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/sparkline/jquery.sparkline.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/js/dashboard.min.js"&gt;&lt;/script&gt;
+  &lt;script src="assets/js/apps.min.js"&gt;&lt;/script&gt;
+  &lt;!-- ================== END PAGE LEVEL JS ================== --&gt;
+  &lt;script&gt;
+    $(document).ready(function() {
+      App.init();
+      Dashboard.init();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-theme-options"><strong>J) Page Theme Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Select the css theme from the <code>assets/css/theme/</code> folder.</p>
+						<h4>Available Theme Options</h4>
+<pre class="prettyprint linenums">
+&lt;!-- DEFAULT - GREEN --&gt;
+&lt;link href="assets/css/theme/default.css" rel="stylesheet" /&gt;
+&lt;!-- BLUE --&gt;
+&lt;link href="assets/css/theme/blue.css" rel="stylesheet" /&gt;
+&lt;!-- PURPLE --&gt;
+&lt;link href="assets/css/theme/purple.css" rel="stylesheet" /&gt;
+&lt;!-- RED --&gt;
+&lt;link href="assets/css/theme/red.css" rel="stylesheet" /&gt;
+&lt;!-- ORANGE --&gt;
+&lt;link href="assets/css/theme/orange.css" rel="stylesheet" /&gt;
+&lt;!-- BLACK --&gt;
+&lt;link href="assets/css/theme/black.css" rel="stylesheet" /&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-options"><strong>K) Page Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Here is the general structure for the each case of page options.</p>
+						<h4>Page Content Theme (Flat Black) <span class="label">NEW</span></h4>
+<pre class="prettyprint linenums">
+&lt;body class="flat-black"&gt;
+</pre>
+						<h4>Page Without Sidebar</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade page-without-sidebar"&gt;
+  &lt;!-- begin #sidebar --&gt;
+  &lt;div id="sidebar" class="sidebar"&gt;
+</pre>
+						<h4>Page With Two Sidebar</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade page-with-two-sidebar"&gt;
+  &lt;!-- begin #sidebar --&gt;
+  &lt;div id="sidebar" class="sidebar"&gt;&lt;/div&gt;
+  &lt;div class="sidebar-bg"&gt;&lt;/div&gt;
+  &lt;!-- end #sidebar --&gt;
+  &lt;!-- begin #sidebar-right --&gt;
+  &lt;div id="sidebar-right" class="sidebar sidebar-right"&gt;&lt;/div&gt;
+  &lt;div class="sidebar-bg sidebar-right"&gt;&lt;/div&gt;
+  &lt;!-- end #sidebar-right --&gt;
+</pre>
+						<h4>Page With Footer</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade"&gt;
+  &lt;!-- begin #footer --&gt;
+  &lt;div id="footer" class="footer"&gt;
+    &lt;!-- Footer Here --&gt;
+  &lt;/div&gt;
+  &lt;!-- end #footer --&gt;
+</pre>
+						<h4>Top Navigation Default</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade"&gt;
+  &lt;!-- begin #header --&gt;
+  &lt;div id="header" class="header navbar navbar-default"&gt;
+</pre>
+						<h4>Top Navigation Fixed</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade page-header-fixed"&gt;
+  &lt;!-- begin #header --&gt;
+  &lt;div id="header" class="header navbar navbar-default navbar-fixed-top"&gt;
+</pre>
+						<h4>Top Navigation Inverse Styling</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade"&gt;
+  &lt;!-- begin #header --&gt;
+  &lt;div id="header" class="header navbar navbar-inverse"&gt;
+</pre>
+						<h4>Sidebar Default</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade"&gt;
+  &lt;!-- begin #sidebar --&gt;
+  &lt;div id="sidebar" class="sidebar"&gt;
+    &lt;!-- Sidebar Here --&gt;
+  &lt;/div&gt;
+  &lt;div class="sidebar-bg"&gt;&lt;/div&gt;
+  &lt;!-- end #sidebar --&gt;
+</pre>
+						<h4>Sidebar Fixed</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade page-sidebar-fixed"&gt;
+  &lt;!-- begin #sidebar --&gt;
+  &lt;div id="sidebar" class="sidebar"&gt;
+</pre>
+						<h4>Sidebar Minified</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade page-sidebar-minified"&gt;
+  &lt;!-- begin #sidebar --&gt;
+  &lt;div id="sidebar" class="sidebar"&gt;
+    &lt;!-- Sidebar Here --&gt;
+  &lt;/div&gt;
+  &lt;div class="sidebar-bg"&gt;&lt;/div&gt;
+  &lt;!-- end #sidebar --&gt;
+</pre>
+						<h4>Sidebar Position Right</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade page-with-right-sidebar"&gt;
+  &lt;!-- begin #sidebar --&gt;
+  &lt;div id="sidebar" class="sidebar"&gt;
+</pre>
+						<h4>Sidebar Grid Styling</h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #sidebar --&gt;
+&lt;div id="sidebar" class="sidebar sidebar-grid"&gt;
+</pre>
+						<h4>Sidebar Gradient Styling <span class="label">NEW</span></h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="gradient-enabled"&gt;
+</pre>
+						<h4>Full Height Page / Table Column Page <span class="label label-primary">NEW</span></h4>
+<pre class="prettyprint linenums">
+&lt;!-- begin #content --&gt;
+&lt;div id="content" class="content content-full-width"&gt;
+  &lt;div class="vertical-box"&gt;
+    &lt;div class="vertical-box-column width-250"&gt;
+      &lt;div class="vertical-box"&gt;
+        &lt;div class="wrapper bg-blue-darker text-white"&gt;
+          Header
+        &lt;/div&gt;
+        &lt;div class="vertical-box-row bg-blue text-white"&gt;
+          &lt;div class="vertical-box-cell"&gt;
+            &lt;div class="vertical-box-inner-cell"&gt;
+              &lt;div data-scrollbar="true" data-height="100%" class="wrapper"&gt;
+                &lt;!-- auto adjust vertical box with scrollbar here --&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="wrapper bg-silver bg-blue-darker text-white"&gt;
+          Footer
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="vertical-box"&gt;
+    &lt;!-- next vertical box column with same / different option like the previous sample code --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- end #content --&gt;
+</pre>
+						<h4>Page Loading HTML <span class="label label-primary">NEW</span></h4>
+						<b>Loading</b>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-loader --&gt;
+&lt;div id="page-loader" class="fade in"&gt;&lt;span class="spinner"&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!-- end #page-loader --&gt;
+
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade"&gt;
+&lt;/div&gt;
+&lt;!-- end #page-container --&gt;
+</pre>
+						<b>After Loading</b>
+<pre class="prettyprint linenums">
+&lt;!-- begin #page-loader --&gt;
+&lt;div id="page-loader" class="fade"&gt;&lt;span class="spinner"&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;!-- end #page-loader --&gt;
+
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="fade in"&gt;
+&lt;/div&gt;
+&lt;!-- end #page-container --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-less"><strong>L) Using LESS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Here is the general LESS structure for the Color Admin.</p>
+						<h4>Required Files</h4>
+<pre class="prettyprint linenums">
+  &lt;link href="assets/less/style.less" rel="stylesheet/less" type="text/css" /&gt;
+  &lt;script src="assets/plugins/less/less.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+						<h4>style.less</h4>
+						<p><code>_component_list.less</code>, <code>_widget_list.less</code>, <code>_plugin_list.less</code>, <code>_page_list.less</code> used to include all the required less files.</p>
+<pre class="prettyprint linenums">
+@import '_variable';
+@import '_mixins';
+@import '_page_setting';
+@import '_header';
+@import '_sidebar';
+@import '_content';
+@import '_footer';
+@import '_helper';
+@import '_component_list';
+@import '_widget_list';
+@import '_plugin_list';
+@import '_page_list';
+@import 'theme/_default';
+@import '_responsive';
+@import '_content_flat_black';
+@import '_pace_loader';
+
+/* Reset and overrides */
+
+body {
+    background: @bg_body;
+    font-size: @body_font_size;
+    font-family: @body_font_family;
+    color: @body_text_color;
+}
+.ie8 body {
+    font-family: @ie8_body_font_family;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+    color: @heading_text_color;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: 60%;
+    font-weight: 300;
+    color: @heading_small_text_color;
+}
+a {
+    .transition(color 100ms ease-in-out);
+}
+a:focus {
+    outline: none;
+}
+label {
+    color: #242a30;
+}
+</pre>
+						<h4>_component_list.less</h4>
+<pre class="prettyprint linenums">
+/* Component List */
+
+@import 'components/_form_elements';
+@import 'components/_dropdown_menu';
+@import 'components/_tooltip';
+@import 'components/_alert_note';
+@import 'components/_badge_label';
+@import 'components/_pagination';
+@import 'components/_progress_bar';
+@import 'components/_nav_tab';
+@import 'components/_button';
+@import 'components/_panel';
+@import 'components/_modal';
+@import 'components/_media_object';
+@import 'components/_table';
+@import 'components/_well';
+@import 'components/_jumbotron';
+@import 'components/_carousel';
+@import 'components/_list_group_item';
+@import 'components/_list_group';
+</pre>
+						<h4>_widget_list.less</h4>
+<pre class="prettyprint linenums">
+/* Widget List */
+
+@import 'widget/_media_message';
+@import 'widget/_widget_stats';
+@import 'widget/_todolist';
+@import 'widget/_theme_panel';
+@import 'widget/_chat_list';
+@import 'widget/_registered_user_list.less';
+@import 'widget/_widget_chart.less';
+</pre>
+						<h4>_plugin_list.less</h4>
+<pre class="prettyprint linenums">
+/* Plugin List */
+
+@import 'plugins/_jquery_draggable';
+@import 'plugins/_slimscrollbar';
+@import 'plugins/_gritter_notification';
+@import 'plugins/_data_table';
+@import 'plugins/_datepicker';
+@import 'plugins/_colorpicker';
+@import 'plugins/_timepicker';
+@import 'plugins/_jquery_autocomplete';
+@import 'plugins/_combobox';
+@import 'plugins/_bootstrap_select';
+@import 'plugins/_tag_it';
+@import 'plugins/_parsley';
+@import 'plugins/_ckeditor_wysihtml5';
+@import 'plugins/_bootstrap_wizard';
+@import 'plugins/_fullcalendar';
+@import 'plugins/_jvectormap';
+@import 'plugins/_flot_chart';
+@import 'plugins/_sparkline';
+@import 'plugins/_bootstrap_calendar';
+@import 'plugins/_superbox';
+@import 'plugins/_select2';
+@import 'plugins/_datetimepicker';
+@import 'plugins/_powerange_slider';
+@import 'plugins/_typeahead';
+</pre>
+						<h4>_page_list.less</h4>
+<pre class="prettyprint linenums">
+/* Page List */
+
+@import 'pages/_page_search_results';
+@import 'pages/_page_vector_map';
+@import 'pages/_page_invoice';
+@import 'pages/_page_login';
+@import 'pages/_page_login_v2';
+@import 'pages/_page_gallery';
+@import 'pages/_page_email';
+@import 'pages/_page_email_v2';
+@import 'pages/_page_email_detail';
+@import 'pages/_page_error';
+@import 'pages/_page_timeline';
+@import 'pages/_page_coming_soon';
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-ajax"><strong>L) Using AJAX version</strong> - <a href="#top">top</a></h3>
+						</div>
+						<div class="alert alert-info">
+						    <b class="label label-info">IMPORTANT</b> Please make sure the server configuration is allow <b>POST</b> method request and it is run on server hosted.
+						</div>
+				        <h4>Base File Structure</h4>
+				        <p>All the header css file & javascript file setting is same with the HTML version. All the ajax content will be fit into the <code>#ajax-content</code> container.</p>
+				        <p>BASE FILE NAME: <code>template_content_ajax/index.html</code></p>
+<pre class="prettyprint linenums">
+&lt;body&gt;
+  &lt;!-- begin #page-loader --&gt;
+  &lt;div id="page-loader" class="fade in"&gt;&lt;span class="spinner"&gt;&lt;/span&gt;&lt;/div&gt;
+  &lt;!-- end #page-loader --&gt;
+  
+  &lt;!-- begin #page-container --&gt;
+  &lt;div id="page-container" class="fade page-sidebar-fixed page-header-fixed"&gt;
+    &lt;!-- begin #header --&gt;
+    &lt;div id="header" class="header navbar navbar-default navbar-fixed-top"&gt;
+      &lt;!-- header content here --&gt;
+    &lt;/div&gt;
+    &lt;!-- end #header --&gt;
+    
+    &lt;!-- begin #sidebar --&gt;
+    &lt;div id="sidebar" class="sidebar"&gt;
+      &lt;!-- sidebar content here --&gt;
+    &lt;/div&gt;
+    &lt;div class="sidebar-bg"&gt;&lt;/div&gt;
+    &lt;!-- end #sidebar --&gt;
+    
+    &lt;!-- begin #ajax-content --&gt;
+    &lt;div id="ajax-content"&gt;
+      &lt;!-- ajax content HERE --&gt;
+    &lt;/div&gt;
+    &lt;!-- end #ajax-content --&gt;
+    
+    &lt;!-- begin theme-panel --&gt;
+    &lt;div class="theme-panel"&gt;
+      &lt;!-- theme panel content here --&gt;
+    &lt;/div&gt;
+    &lt;!-- end theme-panel --&gt;
+    
+    &lt;!-- begin scroll to top btn --&gt;
+    &lt;a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"&gt;
+      &lt;i class="fa fa-angle-up"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;!-- end scroll to top btn --&gt;
+  &lt;/div&gt;
+  &lt;!-- end page container --&gt;
+&lt;/body&gt;
+</pre>
+				        <h4>Ajax Target File Configuration</h4>
+				        <p>
+				            You may use the attribute <code>data-toggle="ajax"</code> to call the javascript function. The <code>href</code> is the target location / target url that retrieve the ajax content. 
+				            If you wish to configure the AJAX content page load function, you may refer to the javascript function name <b>handleLoadPage</b> inside <code>/assets/js/apps.js</code>.
+                        </p>
+<pre class="prettyprint linenums">
+&lt;a href="#ajax/index.html" data-toggle="ajax"&gt;Dashboard v1&lt;/a&gt;
+</pre>
+				        <h4>Restart Global Function after Ajax Content Page Loaded</h4>
+				        <p>
+				            You may use the following code to restart the global function used in <code>apps.js</code>
+				        </p>
+				        <table class="table table-bordered table-striped">
+				            <thead>
+				                <tr><th colspan="2">Global Function List</th></tr>
+				            </thead>
+				            <tbody>
+				                <tr>
+				                    <td width="1%">1.</td>
+				                    <td>handleDraggablePanel()</td>
+				                </tr>
+				                <tr>
+				                    <td>2.</td>
+				                    <td>handleLocalStorage()</td>
+				                </tr>
+				                <tr>
+				                    <td>3.</td>
+				                    <td>handleSlimScroll()</td>
+				                </tr>
+				                <tr>
+				                    <td>4.</td>
+				                    <td>handlePanelAction()</td>
+				                </tr>
+				                <tr>
+				                    <td>5.</td>
+				                    <td>handelTooltipPopoverActivation()</td>
+				                </tr>
+				                <tr>
+				                    <td>6.</td>
+				                    <td>handleAfterPageLoadAddClass()</td>
+				                </tr>
+				            </tbody>
+				        </table>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+    App.restartGlobalFunction();
+&lt;/script&gt;
+</pre>
+				        <h4>Set Page Title after Ajax Content Page Loaded</h4>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+    App.setPageTitle('Color Admin | Dashboard V2');
+&lt;/script&gt;
+</pre>
+				        <h4>Load Javascript / JS File in Ajax Content Page</h4>
+				        <p>
+				            We are using jQuery function <code>$.getScript</code> to load the javascript file.
+				            Here is some example to load the ajax content page that having their own javascript file.
+				        </p>
+<pre class="prettyprint linenums">
+&lt;script&gt;
+var handleDashboardGritterNotification = function() {
+    $(window).load(function() {
+        setTimeout(function() {
+            $.gritter.add({
+                title: 'Welcome back, Admin!',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                image: 'assets/img/user-2.jpg',
+                sticky: true,
+                time: '',
+                class_name: 'my-sticky-class'
+            });
+        }, 1000);
+    });
+};
+$.getScript('assets/plugins/gritter/js/jquery.gritter.js').done(function() {
+  handleDashboardGritterNotification();
+});
+&lt;/script&gt;
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="angular-js"><strong>M) Using Angular JS Version</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Angular JS File Structure:</p>
+<pre class="prettyprint linenums" style="font-family: Menlo,Monaco,Consolas,'Courier New',monospace">
+template_content_angularjs/
+├── index.html
+├── assets/
+│   ├── crossbrowserjs/
+│   ├── css/
+│   ├── img/
+│   ├── js/
+│   │   ├── angular-app.js
+│   │   ├── angular-controller.js
+│   │   ├── angular-directive.js
+│   │   ├── angular-setting.js
+│   │   ├── apps.js
+│   │   └── apps.min.js
+│   └── plugins
+├── template/
+│   ├── app.html
+│   ├── header.html
+│   ├── sidebar.html
+│   ├── sidebar-right.html
+│   ├── top-menu.html
+│   └── theme-panel.html
+└── views/
+    ├── all html view files
+</pre>
+						<p>Page Options:</p>
+<pre class="prettyprint linenums">
+&lt;!-- page sidebar minified --&gt;
+$rootScope.setting.layout.pageSidebarMinified = false;
+
+&lt;!-- page fixed footer --&gt;
+$rootScope.setting.layout.pageFixedFooter = false;
+
+&lt;!-- page with right sidebar --&gt;
+$rootScope.setting.layout.pageRightSidebar = false;
+
+&lt;!-- page with two sidebar --&gt;
+$rootScope.setting.layout.pageTwoSidebar = false;
+
+&lt;!-- page with top menu --&gt;
+$rootScope.setting.layout.pageTopMenu = false;
+
+&lt;!-- page boxed layout --&gt;
+$rootScope.setting.layout.pageBoxedLayout = false;
+
+&lt;!-- page without sidebar --&gt;
+$rootScope.setting.layout.pageWithoutSidebar = false;
+
+&lt;!-- page content full height --&gt;
+$rootScope.setting.layout.pageContentFullHeight = false;
+
+&lt;!-- page content full width --&gt;
+$rootScope.setting.layout.pageContentFullWidth = false;
+
+&lt;!-- pace loading bar stick to top --&gt;
+$rootScope.setting.layout.paceTop = false;
+
+&lt;!-- page header with language bar --&gt;
+$rootScope.setting.layout.pageLanguageBar = false;
+
+&lt;!-- page with transparent sidebar --&gt;
+$rootScope.setting.layout.pageSidebarTransparent = false;
+
+&lt;!-- page with wide sidebar --&gt;
+$rootScope.setting.layout.pageWideSidebar = false;
+
+&lt;!-- page with light sidebar --&gt;
+$rootScope.setting.layout.pageLightSidebar = false;
+
+&lt;!-- page with footer --&gt;
+$rootScope.setting.layout.pageFooter = false;
+
+&lt;!-- page with mega menu --&gt;
+$rootScope.setting.layout.pageMegaMenu = false;
+
+&lt;!-- page without header --&gt;
+$rootScope.setting.layout.pageWithoutHeader = false;
+
+&lt;!-- page body background white --&gt;
+$rootScope.setting.layout.pageBgWhite = false;
+</pre>			
+                    </div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="plugins-resources"><strong>M) Plugins & Resources</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of all plugins and external resources used to power this template.
+						</p>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th style="width:100px;">Name</th>
+									<th>CSS Files</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>jQuery v1.8.2</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery/jquery-1.8.2.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jquery.com/">http://jquery.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jQuery v1.9.1</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery/jquery-migrate-1.1.0.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jquery.com/">http://jquery.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jQuery UI v1.10.4</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/jquery-ui/themes/base/minified/jquery-ui.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jqueryui.com/">http://jqueryui.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap 3.3.1</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap/js/bootstrap.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://getbootstrap.com/">http://getbootstrap.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Font Awesome 4.2.0</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jvectormap</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery-jvectormap/jquery-jvectormap-1.2.2.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jvectormap.com/">http://jvectormap.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jQuery slimScroll</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://rocha.la/jQuery-slimScroll">http://rocha.la/jQuery-slimScroll</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>flot charts</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/flot/jquery.flot.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/flot/jquery.flot.time.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/flot/jquery.flot.resize.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/flot/jquery.flot.pie.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/flot/jquery.flot.stack.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/flot/jquery.flot.crosshair.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/flot/jquery.flot.categories.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://www.flotcharts.org/">http://www.flotcharts.org/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>fullcalendar</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/fullcalendar/fullcalendar/fullcalendar.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/fullcalendar/fullcalendar/fullcalendar.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://arshaw.com/fullcalendar/">http://arshaw.com/fullcalendar/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Gritter</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/gritter/css/jquery.gritter.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/gritter/js/jquery.gritter.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/">http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Isotope</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/isotope/jquery.isotope.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Lightbox 2</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/lightbox/css/lightbox.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/lightbox/js/lightbox-2.6.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://lokeshdhakar.com/projects/lightbox2/">http://lokeshdhakar.com/projects/lightbox2/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Datepicker</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/datepicker.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://bootstrap-datepicker.readthedocs.org/en/release/">http://bootstrap-datepicker.readthedocs.org/en/release/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Timepicker</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jdewit.github.io/bootstrap-timepicker/">http://jdewit.github.io/bootstrap-timepicker/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Colorpicker</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://www.eyecon.ro/bootstrap-colorpicker">http://www.eyecon.ro/bootstrap-colorpicker</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap ComboBox</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-combobox/css/bootstrap-combobox.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-combobox/js/bootstrap-combobox.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/danielfarrell/bootstrap-combobox">https://github.com/danielfarrell/bootstrap-combobox</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jQuery Tag It</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/jquery-tag-it/css/jquery.tagit.css" />
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery-tag-it/js/tag-it.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://aehlke.github.io/tag-it/">http://aehlke.github.io/tag-it/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Select</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-select/bootstrap-select.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-select/bootstrap-select.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Masked Input</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/masked-input/masked-input.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://digitalbush.com/projects/masked-input-plugin/">http://digitalbush.com/projects/masked-input-plugin/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Password Strength Indicator and Generator</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/password-indicator/css/password-indicator.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/password-indicator/js/password-indicator.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://benjaminsterling.com/password-strength-indicator-and-generator/">http://benjaminsterling.com/password-strength-indicator-and-generator/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Parsley Validation</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/parsley/parsley.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/parsley/parsley.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://parsleyjs.org/index.html">http://parsleyjs.org/index.html</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>bootstrap Wysihtml5</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://jhollingworth.github.io/bootstrap-wysihtml5/">http://jhollingworth.github.io/bootstrap-wysihtml5/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>CKEditor</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/ckeditor/ckeditor.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://ckeditor.com/">http://ckeditor.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Wizard</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-wizard/css/bwizard.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-wizard/js/bwizard.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/gilluminate/Bootstrap-Wizard">https://github.com/gilluminate/Bootstrap-Wizard</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Sparkline</td>
+									<td>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/sparkline/jquery.sparkline.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://omnipotent.net/jquery.sparkline/">http://omnipotent.net/jquery.sparkline/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>DataTables <span class="label label-success">v1.10.9</span><br /><small class="muted"><i>(Updated in V1.9.0)</i></small></td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/DataTables/media/js/jquery.dataTables.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://www.datatables.net/">http://www.datatables.net/</a></p>
+									
+									    <p><b>Extension:</b></p>
+									    - AutoFill
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/AutoFill/css/autoFill.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/AutoFill/js/dataTables.autoFill.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/DataTables/extensions/AutoFill/js/autoFill.bootstrap.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - Buttons
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Buttons/js/buttons.colVis.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - colReorder
+</pre>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/ColReorder/css/colReorder.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/ColReorder/js/dataTables.colReorder.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - fixedColumns
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - fixedHeader
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - keyTable
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/KeyTable/css/keyTable.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/KeyTable/js/dataTables.keyTable.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - Responsive
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - rowReorder
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/RowReorder/css/rowReorder.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/RowReorder/js/dataTables.rowReorder.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - scroller
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/Scroller/css/scroller.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Scroller/js/dataTables.scroller.min.js"&gt;&lt;/script&gt;
+</pre>
+									    - select
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/DataTables/extensions/Select/css/select.bootstrap.min.css" /&gt;
+&lt;script src="assets/plugins/DataTables/extensions/Select/js/dataTables.select.min.js"&gt;&lt;/script&gt;
+</pre>
+									</td>
+								</tr>
+								<tr>
+									<td>Ion Range Slider</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/ionRangeSlider/css/ion.rangeSlider.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/ionRangeSlider/css/ion.rangeSlider.skinnice.css" /&gt;
+</pre>
+										<p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/ionRangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">http://ionden.com/a/plugins/ion.rangeSlider/en.html</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Animate.css</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/css/animate.min.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://daneden.github.io/animate.css/">http://daneden.github.io/animate.css/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jQuery Countdown</td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/jquery.countdown/jquery.countdown.css" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery.countdown/jquery.plugin.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery.countdown/jquery.countdown.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://keith-wood.name/countdown.html">http://keith-wood.name/countdown.html</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Zurb Email Template</td>
+									<td>
+										<p><b>Official Link:</b><br /> <a href="http://zurb.com/ink/">http://zurb.com/ink/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jQuery Cookie <br /><small class="muted"><i>(Added in V1.2.0)</i></small></td>
+									<td>
+									    <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery-cookie/jquery.cookie.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/carhartl/jquery-cookie">https://github.com/carhartl/jquery-cookie</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Switchery <br /><small class="muted"><i>(Added in V1.2.0)</i></small></td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/switchery/switchery.min.css" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/switchery/switchery.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://abpetkov.github.io/switchery/">http://abpetkov.github.io/switchery/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Powerange <br /><small class="muted"><i>(Added in V1.2.0)</i></small></td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/powerange/powerange.min.css" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/powerange/powerange.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://abpetkov.github.io/powerange/">http://abpetkov.github.io/powerange/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>X-Editable <br /><small class="muted"><i>(Added in V1.2.0)</i></small></td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap3-editable/css/bootstrap-editable.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap3-editable/inputs-ext/address/address.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap3-editable/inputs-ext/typeaheadjs/lib/typeahead.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/datepicker.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-datetimepicker/css/datetimepicker.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/select2/select2.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap3-editable/js/bootstrap-editable.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap3-editable/inputs-ext/address/address.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap3-editable/inputs-ext/typeaheadjs/lib/typeahead.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap3-editable/inputs-ext/typeaheadjs/typeaheadjs.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap3-editable/inputs-ext/wysihtml5/wysihtml5.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/select2/select2.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/mockjax/jquery.mockjax.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/moment/moment.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://vitalets.github.io/x-editable/">http://vitalets.github.io/x-editable/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jQuery File Upload <br /><small class="muted"><i>(Added in V1.2.0)</i></small></td>
+									<td>
+										<p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/jquery-file-upload/css/jquery.fileupload.css" /&gt;
+&lt;link rel="stylesheet" href="assets/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/vendor/tmpl.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/vendor/load-image.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/jquery.iframe-transport.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/jquery.fileupload.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-process.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-image.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-audio.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-video.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-validate.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/jquery-file-upload/js/jquery.fileupload-ui.js"&gt;&lt;/script&gt;
+&lt;!--[if (gte IE 8)&(lt IE 10)]&gt;
+    &lt;script src="assets/plugins/jquery-file-upload/js/cors/jquery.xdr-transport.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://blueimp.github.io/jQuery-File-Upload/">http://blueimp.github.io/jQuery-File-Upload/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>jQuery-Knob <br /><small class="muted"><i>(Added in V1.2.0)</i></small></td>
+									<td>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jquery-knob/js/jquery.knob.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://anthonyterrien.com/knob/">http://anthonyterrien.com/knob/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Simple Line Icons <br /><small class="muted"><i>(Added in V1.3.0)</i></small></td>
+									<td>
+                                        <p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/simple-line-icons/simple-line-icons.css" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://graphicburger.com/simple-line-icons-webfont/">http://graphicburger.com/simple-line-icons-webfont/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Morris Chart <br /><small class="muted"><i>(Added in V1.3.0)</i></small></td>
+									<td>
+                                        <p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/plugins/morris/morris.css" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/morris/raphael.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/morris/morris.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://morrisjs.github.io/morris.js/index.html">http://morrisjs.github.io/morris.js/index.html</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Superbox <br /><small class="muted"><i>(Added in V1.3.0)</i></small></td>
+									<td>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/superbox/js/superbox.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://toddmotto.com/introducing-superbox-the-reimagined-lightbox-gallery/">http://toddmotto.com/introducing-superbox-the-reimagined-lightbox-gallery/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Chart JS <br /><small class="muted"><i>(Added in V1.6.0)</i></small></td>
+									<td>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/chart-js/chart.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://www.chartjs.org/">http://www.chartjs.org/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>JS Tree <br /><small class="muted"><i>(Added in V1.7.0)</i></small></td>
+									<td>
+                                        <p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link href="assets/plugins/jstree/dist/themes/default/style.min.css" rel="stylesheet" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/jstree/dist/jstree.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://www.jstree.com/">http://www.jstree.com/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap Date Range Picker <br /><small class="muted"><i>(Added in V1.7.0)</i></small></td>
+									<td>
+                                        <p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link href="assets/plugins/jstree/dist/themes/default/style.min.css" rel="stylesheet" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-daterangepicker/moment.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/dangrossman/bootstrap-daterangepicker">https://github.com/dangrossman/bootstrap-daterangepicker</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Select 2 <br /><small class="muted"><i>(Added in V1.7.0)</i></small></td>
+									<td>
+                                        <p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link href="assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/select2/dist/js/select2.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://select2.github.io/">https://select2.github.io/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Flat Icon <br /><small class="muted"><i>(Added in V1.7.0)</i></small></td>
+									<td>
+                                        <p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link href="assets/plugins/flag-icon/css/flag-icon.css" rel="stylesheet" /&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="https://github.com/lipis/flag-icon-css">https://github.com/lipis/flag-icon-css</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Bootstrap DateTime Picker <br /><small class="muted"><i>(Added in V1.8.0)</i></small></td>
+									<td>
+                                        <p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link href="assets/plugins/bootstrap-eonasdan-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="assets/plugins/bootstrap-eonasdan-datetimepicker/build/js/bootstrap-datetimepicker.min.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://eonasdan.github.io/bootstrap-datetimepicker/">http://eonasdan.github.io/bootstrap-datetimepicker/</a></p>
+									</td>
+								</tr>
+								<tr>
+									<td>Chart d3 <br /><small class="muted"><i>(Added in V1.9.0)</i></small></td>
+									<td>
+                                        <p><b>Required CSS File</b></p>
+<pre class="prettyprint linenums">
+&lt;link href="assets/plugins/nvd3/build/nv.d3.css" rel="stylesheet" /&gt;
+</pre>
+                                        <p><b>Required JS File</b></p>
+<pre class="prettyprint linenums">
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js"&gt;&lt;/script&gt;
+&lt;script src="assets/plugins/nvd3/build/nv.d3.js"&gt;&lt;/script&gt;
+</pre>
+										<p><b>Official Link:</b><br /> <a href="http://nvd3.org/">http://nvd3.org/</a></p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="references"><strong>N) References</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							I've used the following images, icons or other files as listed.
+						</p>
+						<p><b>jQuery Plugins</b></p>
+						<ol>
+							<li><b>jvectormap</b>:<a href="http://jvectormap.com/">http://jvectormap.com/</a></li>
+							<li><b>jQuery slimScroll</b>:<a href="http://rocha.la/jQuery-slimScroll">http://rocha.la/jQuery-slimScroll</a></li>
+							<li><b>flot charts</b>:<a href="http://www.flotcharts.org/">http://www.flotcharts.org/</a></li>
+							<li><b>fullcalendar</b>:<a href="http://arshaw.com/fullcalendar/">http://arshaw.com/fullcalendar/</a></li>
+							<li><b>Gritter</b>:<a href="http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/">http://boedesign.com/blog/2009/07/11/growl-for-jquery-gritter/</a></li>
+							<li><b>Isotope</b>:<a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a></li>
+							<li><b>Lightbox 2</b>:<a href="http://lokeshdhakar.com/projects/lightbox2/">http://lokeshdhakar.com/projects/lightbox2/</a></li>
+							<li><b>Bootstrap Datepicker</b>:<a href="http://bootstrap-datepicker.readthedocs.org/en/release/">http://bootstrap-datepicker.readthedocs.org/en/release/</a></li>
+							<li><b>Bootstrap Timepicker</b>:<a href="http://jdewit.github.io/bootstrap-timepicker/">http://jdewit.github.io/bootstrap-timepicker/</a></li>
+							<li><b>Bootstrap Colorpicker</b>:<a href="http://www.eyecon.ro/bootstrap-colorpicker">http://www.eyecon.ro/bootstrap-colorpicker</a></li>
+							<li><b>Bootstrap ComboBox</b>:<a href="https://github.com/danielfarrell/bootstrap-combobox">https://github.com/danielfarrell/bootstrap-combobox</a></li>
+							<li><b>Bootstrap Select</b>:<a href="http://silviomoreto.github.io/bootstrap-select/">http://silviomoreto.github.io/bootstrap-select/</a></li>
+							<li><b>Masked Input</b>:<a href="http://digitalbush.com/projects/masked-input-plugin/">http://digitalbush.com/projects/masked-input-plugin/</a></li>
+							<li><b>Password Strength Indicator and Generator</b>:<a href="http://benjaminsterling.com/password-strength-indicator-and-generator/">http://benjaminsterling.com/password-strength-indicator-and-generator/</a></li>
+							<li><b>Parsley</b>:<a href="http://parsleyjs.org/index.html">http://parsleyjs.org/index.html</a></li>
+							<li><b>Bootstrap WYSIHTML5</b>:<a href="http://jhollingworth.github.io/bootstrap-wysihtml5/">http://jhollingworth.github.io/bootstrap-wysihtml5/</a></li>
+							<li><b>CKEditor</b>:<a href="http://ckeditor.com/">http://ckeditor.com/</a></li>
+							<li><b>Bootstrap Wizard</b>:<a href="https://github.com/gilluminate/Bootstrap-Wizard">https://github.com/gilluminate/Bootstrap-Wizard</a></li>
+							<li><b>Sparkline</b>:<a href="http://omnipotent.net/jquery.sparkline/">http://omnipotent.net/jquery.sparkline/</a></li>
+							<li><b>Table Data</b>:<a href="http://datatables.net/blog/Twitter_Bootstrap_2">http://datatables.net/blog/Twitter_Bootstrap_2</a></li>
+							<li><b>Ion Range Slider</b>:<a href="http://ionden.com/a/plugins/ion.rangeSlider/en.html">http://ionden.com/a/plugins/ion.rangeSlider/en.html</a></li>
+						    <li><b>jQuery Tag It</b>:<a href="http://aehlke.github.io/tag-it/">http://aehlke.github.io/tag-it/</a></li>
+						    <li><b>jQuery Countdown</b>:<a href="http://keith-wood.name/countdown.html">http://keith-wood.name/countdown.html</a></li>
+						    <li><b>Zurb Email Template</b>:<a href="http://zurb.com/ink/">http://zurb.com/ink/</a></li>
+						    <li><b>jQuery Cookie</b>:<a href="https://github.com/carhartl/jquery-cookie">https://github.com/carhartl/jquery-cookie</a></li>
+						    <li><b>Switchery</b>:<a href="http://abpetkov.github.io/switchery/">http://abpetkov.github.io/switchery/</a></li>
+						    <li><b>Powerange</b>:<a href="http://abpetkov.github.io/powerange/">http://abpetkov.github.io/powerange/</a></li>
+						    <li><b>X-Editable </b>:<a href="http://vitalets.github.io/x-editable/">http://vitalets.github.io/x-editable/</a></li>
+						    <li><b>jQuery File Upload </b>:<a href="http://blueimp.github.io/jQuery-File-Upload/">http://blueimp.github.io/jQuery-File-Upload/</a></li>
+						    <li><b>jQuery-Knob</b>:<a href="http://anthonyterrien.com/knob/">http://anthonyterrien.com/knob/</a></li>
+						    <li><b>Simple Line Icons</b>:<a href="http://graphicburger.com/simple-line-icons-webfont/">http://graphicburger.com/simple-line-icons-webfont/</a></li>
+						    <li><b>Morris Chart</b>:<a href="http://morrisjs.github.io/morris.js/index.html">http://morrisjs.github.io/morris.js/index.html</a></li>
+						    <li><b>Superbox</b>:<a href="http://toddmotto.com/introducing-superbox-the-reimagined-lightbox-gallery/">http://toddmotto.com/introducing-superbox-the-reimagined-lightbox-gallery/</a></li>
+						    <li><b>Chart JS</b>:<a href="http://www.chartjs.org/">http://www.chartjs.org/</a></li>
+						    <li><b>JS Tree</b>:<a href="http://www.jstree.com/">http://www.jstree.com/</a></li>
+						    <li><b>Bootstrap Date Range Picker</b>:<a href="https://github.com/dangrossman/bootstrap-daterangepicker">https://github.com/dangrossman/bootstrap-daterangepicker</a></li>
+						    <li><b>Select2</b>:<a href="https://select2.github.io/">https://select2.github.io/</a></li>
+						    <li><b>Flag Icon</b>:<a href="https://github.com/lipis/flag-icon-css">https://github.com/lipis/flag-icon-css</a></li>
+						    <li><b>Bootstrap Date Time Picker</b>:<a href="http://eonasdan.github.io/bootstrap-datetimepicker/">http://eonasdan.github.io/bootstrap-datetimepicker/</a></li>
+						    <li><b>NVD3</b>:<a href="http://nvd3.org/">http://nvd3.org/</a></li>
+						</ol>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="change-log"><strong>O) Change Log</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h5>Version 1.9.0 - 05 October 2015</h5>
+						<ul>
+                            <li>
+                                NEW: Angular JS Version
+                                <ul>
+                                    <li>Added files: <code>template_content_angularjs</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: NVD3 Chart
+                                <ul>
+                                    <li>Added HTML files: <code>chart_d3.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/nvd3/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Page with Top Menu
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_top_menu.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Boxed Layout
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_boxed_layout.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Page with Mixed Menu
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_mixed_menu.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Boxed Layout with Mixed Menu
+                                <ul>
+                                    <li>Added HTML files: <code>page_boxed_layout_with_mixed_menu.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Transparent Sidebar
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_transparent_sidebar.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: DataTables Extension - RowReorder
+                                <ul>
+                                    <li>Added HTML files: <code>table_manage_rowreorder.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: DataTables Extension - Select
+                                <ul>
+                                    <li>Added HTML files: <code>table_manage_select.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: DataTables Version - 1.10.9
+                                <ul>
+                                    <li>Modified Plugins files: <code>/assets/DataTables</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCED: Color Admin Apps.js
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.8.0 - 30 June 2015</h5>
+						<ul>
+                            <li>
+                                NEW: Bootstrap Date Time Picker
+                                <ul>
+                                    <li>Modified HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap-eonasdan-datetimepicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Full Color Panel
+                                <ul>
+                                    <li>Modified HTML files: <code>ui_widget_boxes.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Login Page v2 Background in Large Screen (> 1920px)
+                                <ul>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Page Sidebar Expand / Collapse Height Rendering
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Page Sidebar Scrollbar Touch Event in Tablet Device
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Clearfix Mixin Crashed with Bootstrap Mixin
+                                <ul>
+                                    <li>Updated File: <code>/assets/less/_mixins.less</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Include Bootstrap LESS 
+                                <ul>
+                                    <li>Added Directory: <code>/assets/less/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.3.4 to Bootstrap 3.3.5
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Less 1.7.4 to Less 2.5.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/less/</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.7.0 - 1 May 2015</h5>
+						<ul>
+                            <li>
+                                NEW: Tree View
+                                <ul>
+                                    <li>Added HTML files: <code>ui_tree.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/jstree/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Language Bar & Icon List
+                                <ul>
+                                    <li>Added HTML files: <code>ui_language_bar_icon.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/flag-icon/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Bootstrap Date Range Picker
+                                <ul>
+                                    <li>Updated HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap-daterangepicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Select2
+                                <ul>
+                                    <li>Updated HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/select2/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Top Navbar Mega Menu
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_mega_menu.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Login & Register Page v3
+                                <ul>
+                                    <li>Added HTML files: <code>login_v3.html</code></li>
+                                    <li>Added HTML files: <code>register_v3.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Profile Page
+                                <ul>
+                                    <li>Added HTML files: <code>extra_profile.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Light Sidebar
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_light_sidebar.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Wide Sidebar
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_wide_sidebar.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Mobile View Scrollbar
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/css/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Mobile View Minified Sidebar Scrollbar
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/css/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.3.3 to Bootstrap 3.3.4
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Multi Level Menu Bugfix
+                                <ul>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Ajax Version Coming Soon Page
+                                <ul>
+                                    <li>Modified HTML files: <code>/assets/js/coming-soon.demo.js</code> and <code>/assets/js/coming-soon.demo.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Ajax Version href="#" rendering error
+                                <ul>
+                                    <li>Modified HTML files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.6.0 - 23 January 2015</h5>
+						<ul>
+                            <li>
+                                NEW: Managed Table - Extension Combination
+                                <ul>
+                                    <li>Added HTML: <code>table_mange_combine.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Chart JS
+                                <ul>
+                                    <li>Added HTML: <code>chart_js.html</code></li>
+                                    <li>Added PLUGINS: <code>assets/plugins/assets/chart-js/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Ajax Documentation
+                                <ul>
+                                    <li>Updated Directory: <code>documentation/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.3.1 to Bootstrap 3.3.2
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: FontAwesome 4.2.0 to Bootstrap 4.3.0
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/font-awesome/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: IE 8 - IE 10 Full Height Page
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified Directory files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Mobile Sidebar Toggle Button
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified Directory files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Tab Inverse Hover
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: IE10 Sidebar Menu
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Minified Sidebar Multiple Level Menu
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+						</ul>
+						<h5>Version 1.5.0 - 30 November 2014</h5>
+						<ul>
+                            <li>
+                                NEW: AJAX Version
+                                <ul>
+                                    <li>New Directory files: <code>/template_content_ajax</code></li>
+                                    <li>New Directory files: <code>/template_content_ajax</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Color Scheme (Black)
+                                <ul>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Sidebar Color Scheme (Gradient)
+                                <ul>
+                                    <li>Modified CSS files: <code>/assets/css/theme/default.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/blue.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/red.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/orange.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/purple.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/black.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Local Storage Panel Position
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified Directory files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Ionicons
+                                <ul>
+                                    <li>Added HTML files: <code>ui_ionicons.html</code></li>
+                                    <li>Added HTML files: <code>page_with_ionicons.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/ionicons/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: DataTables Plugins
+                                <ul>
+                                    <li>Added HTML files: <code>table_manage_autofill.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_colreorder.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_colvis.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_fixed_columns.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_fixed_header.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_keytable.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_responsive.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_scroller.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_tabletools.html</code></li>
+                                    <li>Updated PLUGINS files: <code>/assets/plugins/DataTables/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Pace Loader Plugins
+                                <ul>
+                                    <li>Modified HTML files: <code>all html files</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/pace/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.2.0 to Bootstrap 3.3.1
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/plugins/bootstrap-3.2.0/</code> to <code>/assets/plugins/bootstrap/</code></li>
+                                    <li>Modified CSS Files: <code>/assets/plugins/bootstrap/css/bootstrap.min.js</code></li>
+                                    <li>Modified JS Files: <code>/assets/plugins/bootstrap/js/bootstrap.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: jQuery 1.8.2 to jQuery 1.9.1
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/plugins/jquery-1.8.1/</code> to <code>/assets/plugins/jquery</code></li>
+                                    <li>Added JS Files: <code>/assets/plugins/jquery/jquery-1.9.1.js</code></li>
+                                    <li>Added JS Files: <code>/assets/plugins/jquery/jquery-1.9.1.min.js</code></li>
+                                    <li>Added JS Files: <code>/assets/plugins/jquery/jquery-migrate-1.1.0.js</code></li>
+                                    <li>Added JS Files: <code>/assets/plugins/jquery/jquery-migrate-1.1.0.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                MODIFY: FontAwesome Directory
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/plugins/font-awesome-4.2.0/</code> to <code>/assets/plugins/font-awesome/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: IE8 Font Rendering Issue
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Google Chrome Fixed Element Rendering Issue
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.4.0 - 17 September 2014</h5>
+						<ul>
+						    <li>
+						        NEW: Front end one page parallax page Added
+						        <ul>
+						            <li>Added HTML files: <code>/frontend/one-page-parallax/index.html</code></li>
+						            <li>Added HTML files: <code>/frontend/one-page-parallax/index_inverse_header.html</code></li>
+						            <li>Added HTML files: <code>/frontend/one-page-parallax/index_default_header.html</code></li>
+						            <li>Added HTML files: <code>/frontend/one-page-parallax/extra-element.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+                                NEW: Email Inbox v2 page Added
+						        <ul>
+						            <li>Added HTML files: <code>email_inbox_v2.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+                                NEW: Email Compose v2 page Added
+						        <ul>
+						            <li>Added HTML files: <code>email_compose.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+                                NEW: Email Detail v2 page Added
+						        <ul>
+						            <li>Added HTML files: <code>email_detail.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        NEW: LESS file Added
+						        <ul>
+						            <li>Added LESS files: <code>assets/less</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        NEW: Added Meta Setting to Disable Mobile Zooming
+						        <ul>
+						            <li>Modified HTML files: <code>ALL</code></li>
+						        </ul>
+						    </li>
+                            <li>
+                                FIX: Accordion Styling Overflow
+						        <ul>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Mobile Slimscroll Scrolling Speed
+						        <ul>
+						            <li>Modified js files: <code>assets/js/apps.js</code></li>
+						            <li>Modified js files: <code>assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Mobile Sidebar Click Event
+						        <ul>
+						            <li>Modified js files: <code>assets/js/apps.js</code></li>
+						            <li>Modified js files: <code>assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.3.0 - 30 August 2014</h5>
+						<ul>
+                            <li>
+                                NEW: Dashboard v2 Page
+						        <ul>
+						            <li>Added new html files: <code>dashboard_v2.html</code></li>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Simple Line Icons Page
+						        <ul>
+						            <li>Added new html files: <code>ui_simple_line_icons.html</code></li>
+						            <li>Added new plugins files: <code>assets/plugins/simple-line-icons</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Morris Chart Page
+						        <ul>
+						            <li>Added new html files: <code>chart_morris.html</code></li>
+						            <li>Added new plugins files: <code>assets/plugins/morris</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Page with Line Icons
+						        <ul>
+						            <li>Added new html files: <code>page_with_line_icons.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Full Height Content Page
+						        <ul>
+						            <li>Added new html files: <code>page_full_height.html</code></li>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+						            <li>Modified css files: <code>assets/css/style-responsive.css</code></li>
+						            <li>Modified css files: <code>assets/css/style-responsive.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: CSS Helper Page
+						        <ul>
+						            <li>Added new html files: <code>helper_css.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Gallery v2 Page
+						        <ul>
+						            <li>Added new html files: <code>gallery_v2.html</code></li>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+						            <li>Modified css files: <code>assets/css/style-responsive.css</code></li>
+						            <li>Modified css files: <code>assets/css/style-responsive.min.css</code></li>
+						            <li>Added new plugins files: <code>assets/plugins/superbox</code></li>
+                                </ul>
+                            </li>
+						    <li>
+						        UPDATE: FontAwesome from 4.1.0 to 4.2.0</code>
+						        <ul>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        CHANGE: <code>chart.html</code> to <code>flot-chart.html</code>
+						    </li>
+						    <li>
+						        CHANGE: <code>.widget-states</code> to <code>.widget-stats</code>
+						        <ul>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Typo on Sidebar Link Url
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Minified Sidebar on Tablet
+						        <ul>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+						        </ul>
+						    </li>
+					    </ul>
+						<h5>Version 1.2.0 - 15 June 2014</h5>
+						<ul>
+						    <li>
+						        NEW: 5 Color Theme
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/default.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/blue.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/red.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/orange.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/purple.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/black.html</code></li>
+                                    <li>Added new css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Inverse & Default Top Navigation Theme
+                                <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Sidebar Grid Layout Option
+                                <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Theme Panel
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Sidebar & Header Default & Fixed Option
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Page With Two Sidebar
+                                <ul>
+						            <li>Added new html files: <code>page_with_two_sidebar.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Login V2
+                                <ul>
+						            <li>Added new html files: <code>login_v2.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: X-Editable
+                                <ul>
+						            <li>Added new html files: <code>form_editable.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Multiple File Upload
+                                <ul>
+						            <li>Added new html files: <code>form_multiple_upload.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Form Slider + Switcher Page
+						        <ul>
+						            <li>Added new html files: <code>form_slider_switcher.html</code></li>
+                                    <li>Added new plugins file: <code>assets/plugins/switchery</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Wizards + Validation Page
+						        <ul>
+						            <li>Added new html files: <code>form_wizards_validation.html</code></li>
+                                    <li>Updated plugins file: <code>assets/plugins/parsley</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Plugins Parsley 2.0 
+						        <ul>
+						            <li>Updated html files: <code>form_wizards.html</code></li>
+                                    <li>Updated plugins file: <code>assets/plugins/parsley</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UI: Dashboard widget state & line chart improvement
+                                <ul>
+						            <li>Modified html files: <code>index.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+						    <li>
+						        FIX: Mobile Top Navigation Fixed Top
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Mobile Sidebar Fixed Right Position
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Panel Remove Action Tooltip
+						        <ul>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Mozilla Firefox Sidebar Minimized
+						        <ul>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Sidebar DOM Element Didn't Functioning 
+						        <ul>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Sidebar Uncollapsed Sub Menu After Minify
+						        <ul>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Old Browser Transparent Background Styling Support 
+						        <ul>
+						            <li>Added new folder: <code>assets/img/transparent/</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						</ul>
+						<p>&nbsp;</p>
+						<h5>Version 1.1.0 – 30 May 2014</h5>
+						<ul>
+						    <li>
+						        NEW: Email Template
+						        <ul>
+                                    <li>Added new html file: <code>email_system.html</code></li>
+                                    <li>Added new html file: <code>email_newsletter.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+						    </li>
+						    <li>
+						        NEW: Timeline Page
+						        <ul>
+                                    <li>Added new html file: <code>extra_timeline.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+                                </ul>
+						    </li>
+						    <li>
+						        NEW: Coming Soon Page
+						        <ul>
+                                    <li>Added new html file: <code>extra_coming_soon.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+                                </ul>
+						    </li>
+						    <li>
+						        FIX: Sidebar Sub Menu Caret Styling
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Modal Backdrop Opacity
+						        <ul>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Login form in mobile landscape view 
+						        <ul>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Mobile View Search Box in header
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Icon page broken on mobile
+						        <ul>
+                                    <li>Modified file: <code>ui_icons.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Dashboard Tab Panel on mobile
+						        <ul>
+						            <li>Modified html files: <code>index.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+						        </ul>
+						    </li>
+						</ul>
+					</div>
+			    </div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-button.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+    <script src="assets/bootstrap/js/holder/holder.js"></script>
+    <script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>
