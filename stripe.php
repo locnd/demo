@@ -1,4 +1,4 @@
-<form action="stripe_action.php" method="POST" id="payment-form">
+<form action="/stripe_action.php" method="POST" id="payment-form">
     <span class="payment-errors"></span>
     <div class="form-row">
         <label>
@@ -58,9 +58,7 @@
         if (response.error) {
             $('.payment-errors').text(response.error.message);
         } else {
-            var token = response.id;
-            $('#payment-form').append($('<input type="hidden" name="stripeToken" />').val(token));
-            console.log(token);
+            $('#payment-form').append($('<input type="hidden" name="stripeToken" />').val(response.id));
             $('#payment-form').submit();
         }
     }
