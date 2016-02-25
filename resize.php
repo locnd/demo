@@ -28,9 +28,9 @@ function resizeImagesInFolder($dir, $i) {
                 $image = new SimpleImage();
                 $image->load($dir . '/' . $file);
                 if ($image->getHeight() < $image->getWidth()) {
-                    $image->resizeToWidth(1024);
+                    $image->resizeToWidth(1920);
                 } else {
-                    $image->resizeToHeight(1024);
+                    $image->resizeToHeight(1920);
                 }
                 if ($i < 10) {
                     $new = 'cover/' . $dir . '/00' . $i . '.' . $image->type;
