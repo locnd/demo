@@ -32,6 +32,7 @@ function resizeImagesInFolder($dir, $i) {
                 } else {
                     $image->resizeToHeight(1920);
                 }
+                // $new = 'cover/' . $dir . '/'.$image->name;
                 if ($i < 10) {
                     $new = 'cover/' . $dir . '/00' . $i . '.' . $image->type;
                 } elseif ($i < 100) {
@@ -54,10 +55,12 @@ class SimpleImage {
     var $image;
     var $image_type;
     var $type;
+    var $name;
 
     function load($filename) {
         $image_info = getimagesize($filename);
         $info = pathinfo($filename);
+        $this->name = $info['basename'];
         $this->type = $info['extension'];
         $this->image_type = $image_info[2];
         if ($this->image_type == IMAGETYPE_JPEG) {
