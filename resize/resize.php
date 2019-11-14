@@ -1,11 +1,7 @@
 <?php
 
-$dir = 'picture';
-
-if (!is_dir('cover')) {
-    toFolder('cover');
-}
-resizeImagesInFolder($dir, 1);
+$dir = '/var/www/demo/resize/pictures';
+resizeImagesInFolder($dir);
 echo "Success.";
 
 function toFolder($dir) {
@@ -15,16 +11,19 @@ function toFolder($dir) {
     }
 }
 
-function resizeImagesInFolder($dir, $i) {
-    if (!is_dir('cover/' . $dir)) {
-        toFolder('cover/' . $dir);
-    }
+function resizeImagesInFolder($dir) {
+    $to_folder = str_replace('/var/www/demo/resize/pictures', '/var/www/demo/resize/done', $dir);
+    toFolder($to_folder);
 
     $files = scandir($dir);
-    foreach ($files as $key => $file) {
-        if ($file != '.' && $file != '..') {
-            if (!is_dir($dir . '/' . $file)) {
+    $i = 0;
+    foreach ($files as $file) {
+        if ($file != '.' && $file != '..' && $file != 'temp.txt') {
+            if (is_dir($dir . '/' . $file)) {
+                resizeImagesInFolder($dir . '/' . $file);
+            } else {
                 echo $dir . '/' . $file;
+                $i++;
                 $image = new SimpleImage();
                 $image->load($dir . '/' . $file);
                 if ($image->getHeight() < $image->getWidth()) {
@@ -34,17 +33,14 @@ function resizeImagesInFolder($dir, $i) {
                 }
                 // $new = 'cover/' . $dir . '/'.$image->name;
                 if ($i < 10) {
-                    $new = 'cover/' . $dir . '/00' . $i . '.' . $image->type;
+                    $new = $to_folder . '/00' . $i . '.' . strtolower($image->type);
                 } elseif ($i < 100) {
-                    $new = 'cover/' . $dir . '/0' . $i . '.' . $image->type;
+                    $new = $to_folder . '/0' . $i . '.' . strtolower($image->type);
                 } else {
-                    $new = 'cover/' . $dir . '/' . $i . '.' . $image->type;
+                    $new = $to_folder . '/' . $i . '.' . strtolower($image->type);
                 }
                 $image->save($new);
-                echo ' ---------> ' . $new . '<br>';
-                $i++;
-            } else {
-                resizeImagesInFolder($dir . '/' . $file, 1);
+                echo ' ---------> ' . $new . PHP_EOL. '<br>'. PHP_EOL;
             }
         }
     }
