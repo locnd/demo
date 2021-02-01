@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <script src="assets/js/jquery.3.4.1.min.js"></script>
+        <style>
+            .mega-logo, .power-logo {
+                width: 40%;
+                max-width: 200px;
+                float: left;
+                height: 80px;
+            }
+            img.power-logo {
+                float:right
+            }
+            .clear10 {
+                clear:both;
+                height:10px;
+            }
+            #ticket {
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 40px 40px;
+            }
+            .ticket-element {
+                border-radius: 50%;
+                border: red solid 2px;
+                padding: 7px;
+                font-size: 18px;
+                font-family: consolas;
+                margin: 0 3px;
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img onclick="random_ticket(45)" class="mega-logo" src="assets/images/mega-6-45.png">
+            <img onclick="random_ticket(55)" class="power-logo" src="assets/images/power-6-55.png">
+        </div>
+        <div class="clear10"></div>
+        <hr>
+        <div class="clear10"></div>
+        <div id="ticket">
+
+        </div>
+        <script>
+            function random_ticket(max) {
+                var values = [];
+                while (values.length < 6) {
+                    var random = Math.floor(Math.random() * max) + 1;
+                    random = random < 10 ? '0'+random : ''+random;
+                    if(values.indexOf(random) === -1) {
+                        values.push('<span class="ticket-element">'+random+'</span>');
+                    }
+                }
+                values.sort();
+                $("#ticket").html(values.join(""));
+            }
+        </script>
+    </body>
+</html>

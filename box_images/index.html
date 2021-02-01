@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - A Pen by  Rykyu Yami</title>
+<style>
+    *{
+	margin: 0;
+	padding: 0;
+	cursor: url(https://i.ibb.co/mz9rDX4/star.png), auto;
+}
+body {
+	max-width: 100%;
+	min-width: 100%;
+	height: 100%;
+	position: absolute;
+    overflow: hidden;
+}
+
+.let-it-snow {
+    background: linear-gradient(-45deg, #E4AA99, #E594B3, #53B3D6, #67DABF, #E594B3, #E4AA99, #67DABF, #53B3D6);
+	animation: gradientBG 8s ease infinite;
+	width: 400%;
+	height: 400%;
+   background-size: cover;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-size: 300% 300%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+li {
+	list-style: none;
+}
+
+.box {
+    top: 260px;
+	width: 200px;
+	height: 200px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: absolute;
+	margin-left: 10%;
+	margin-right: 30%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: rotateX(13deg);
+	-webkit-animation: move 5s linear infinite;
+}
+
+.minbox {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50px;
+	top: 30px;
+	-webkit-transform-style: preserve-3d;
+}
+
+.minbox li {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.minbox li:nth-child(1){
+	background: url("images/mini_1.png") no-repeat 0 0;
+	-webkit-transform: translateZ(50px);
+}
+
+.minbox li:nth-child(2){
+	background: url("images/mini_2.png") no-repeat 0 0;
+	-webkit-transform: rotateX(180deg) translateZ(50px);
+}
+
+.minbox li:nth-child(3){
+	background: url("images/mini_3.png") no-repeat 0 0;
+	-webkit-transform: rotateX(-90deg) translateZ(50px);
+}
+
+.minbox li:nth-child(4){
+	background: url("images/mini_4.png") no-repeat 0 0;
+	-webkit-transform: rotateX(90deg) translateZ(50px);
+}
+
+.minbox li:nth-child(5){
+	background: url("images/mini_5.png") no-repeat 0 0;
+	-webkit-transform: rotateY(-90deg) translateZ(50px);
+}
+
+.minbox li:nth-child(6){
+	background: url("images/mini_6.png") no-repeat 0 0;
+	-webkit-transform: rotateY(90deg) translateZ(50px);
+}
+
+.maxbox li:nth-child(1){
+	background: url("images/large_1.png") no-repeat 0 0;
+	-webkit-transform: translateZ(50px);
+}
+
+.maxbox li:nth-child(2){
+	background: url("images/large_2.png") no-repeat 0 0;
+	-webkit-transform: rotateX(180deg) translateZ(50px);
+}
+
+.maxbox li:nth-child(3){
+	background: url("images/large_3.png") no-repeat 0 0;
+	-webkit-transform: rotateX(-90deg) translateZ(50px);
+}
+
+.maxbox li:nth-child(4){
+	background: url("images/large_4.png") no-repeat 0 0;
+	-webkit-transform: rotateX(90deg) translateZ(50px);
+}
+
+.maxbox li:nth-child(5){
+	background: url("images/large_5.png") no-repeat 0 0;
+	-webkit-transform: rotateX(-90deg) translateZ(50px);
+}
+
+.maxbox li:nth-child(6){
+	background: url("images/large_6.png") no-repeat 0 0;
+	-webkit-transform: rotateX(90deg) translateZ(50px);
+}
+
+.maxbox {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    top: -20px;
+    -webkit-transform-style: preserve-3d;
+}
+
+.maxbox li {
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    -webkit-transition: all 1.2s ease;
+}
+
+.maxbox li:nth-child(1){
+	-webkit-transform: translateZ(100px);
+}
+
+.maxbox li:nth-child(2){
+	-webkit-transform: rotateX(180deg) translateZ(100px);
+}
+
+.maxbox li:nth-child(3){
+	-webkit-transform: rotateX(-90deg) translateZ(100px);
+}
+
+.maxbox li:nth-child(4){
+	-webkit-transform: rotateX(90deg) translateZ(100px);
+}
+
+.maxbox li:nth-child(5){
+	-webkit-transform: rotateY(-90deg) translateZ(100px);
+}
+
+.maxbox li:nth-child(6){
+	-webkit-transform: rotateY(90deg) translateZ(100px);
+}
+
+.box:hover ol li:nth-child(1){
+	-webkit-transform: translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+
+.box:hover ol li:nth-child(2){
+	-webkit-transform: rotateX(180deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+
+.box:hover ol li:nth-child(3){
+	-webkit-transform: rotateX(-90deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+
+.box:hover ol li:nth-child(4){
+	-webkit-transform: rotateX(90deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+
+.box:hover ol li:nth-child(5){
+	-webkit-transform: rotateY(-90deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+
+.box:hover ol li:nth-child(6){
+	-webkit-transform: rotateY(90deg) translateZ(300px);
+	width: 400px;
+	height: 400px;
+	opacity: 0.8;
+	left: -100px;
+	top: -100px;
+}
+
+@keyframes move{
+	0%{
+		-webkit-transform: rotateX(13deg) rotateY(0deg);
+	}
+	100%{
+		-webkit-transform: rotateX(13deg) rotateY(360deg);
+	}
+}
+
+
+  </style>
+<script type="text/javascript" async="" src="assets/ga.js"></script><script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<title></title>
+<link href="assets/let-it-snow.css" rel="stylesheet" type="text/css">
+<script src="assets/jquery-2.js"></script>
+<script src="assets/let-it-snow.js"></script>
+
+
+<div class="let-it-snow"><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span><span class="lis-flake"></span>
+<div class="box">
+<ul class="minbox">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<ol class="maxbox">
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+</div>
+<span class="lis-flake--js" style="left: 30%; top: -10px; width: 4px; height: 0px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 85%; top: -500px; width: 1px; height: 3px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 61%; top: -320px; width: 5px; height: 4px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 47%; top: -90px; width: 2px; height: 2px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 1%; top: -230px; width: 4px; height: 4px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 86%; top: -690px; width: 4px; height: 5px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 100%; top: -110px; width: 5px; height: 0px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 41%; top: -320px; width: 2px; height: 2px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 11%; top: -560px; width: 4px; height: 5px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 93%; top: -630px; width: 3px; height: 1px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 67%; top: -470px; width: 5px; height: 4px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 43%; top: -200px; width: 2px; height: 5px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 64%; top: -570px; width: 3px; height: 2px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 7%; top: -540px; width: 0px; height: 2px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 54%; top: -860px; width: 3px; height: 5px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 95%; top: -120px; width: 2px; height: 4px; margin-top: 91.8721px;"></span><span class="lis-flake--js" style="left: 70%; top: -50px; width: 4px; height: 3px;"></span><span class="lis-flake--js" style="left: 73%; top: -50px; width: 5px; height: 0px;"></span><span class="lis-flake--js" style="left: 25%; top: -430px; width: 4px; height: 3px;"></span><span class="lis-flake--js" style="left: 11%; top: -790px; width: 1px; height: 1px;"></span><span class="lis-flake--js" style="left: 19%; top: -150px; width: 2px; height: 4px;"></span><span class="lis-flake--js" style="left: 13%; top: -920px; width: 5px; height: 2px;"></span><span class="lis-flake--js" style="left: 84%; top: -860px; width: 3px; height: 0px;"></span><span class="lis-flake--js" style="left: 0%; top: -490px; width: 5px; height: 0px;"></span><span class="lis-flake--js" style="left: 59%; top: -700px; width: 3px; height: 1px;"></span><span class="lis-flake--js" style="left: 86%; top: -510px; width: 3px; height: 3px;"></span><span class="lis-flake--js" style="left: 88%; top: -700px; width: 1px; height: 0px;"></span><span class="lis-flake--js" style="left: 43%; top: -760px; width: 4px; height: 0px;"></span><span class="lis-flake--js" style="left: 44%; top: -410px; width: 3px; height: 1px;"></span><span class="lis-flake--js" style="left: 7%; top: -720px; width: 3px; height: 1px;"></span><span class="lis-flake--js" style="left: 64%; top: -230px; width: 3px; height: 2px;"></span><span class="lis-flake--js" style="left: 91%; top: -30px; width: 4px; height: 3px;"></span><span class="lis-flake--js" style="left: 20%; top: -430px; width: 0px; height: 5px;"></span><span class="lis-flake--js" style="left: 18%; top: -350px; width: 4px; height: 1px;"></span><span class="lis-flake--js" style="left: 99%; top: -980px; width: 3px; height: 2px;"></span><span class="lis-flake--js" style="left: 8%; top: -10px; width: 3px; height: 4px;"></span><span class="lis-flake--js" style="left: 25%; top: -460px; width: 4px; height: 1px;"></span><span class="lis-flake--js" style="left: 32%; top: -890px; width: 4px; height: 3px;"></span><span class="lis-flake--js" style="left: 61%; top: -870px; width: 0px; height: 3px;"></span><span class="lis-flake--js" style="left: 81%; top: -840px; width: 3px; height: 3px;"></span><span class="lis-flake--js" style="left: 62%; top: -950px; width: 5px; height: 3px;"></span><span class="lis-flake--js" style="left: 68%; top: -280px; width: 4px; height: 3px;"></span><span class="lis-flake--js" style="left: 27%; top: -950px; width: 2px; height: 1px;"></span><span class="lis-flake--js" style="left: 41%; top: -980px; width: 4px; height: 4px;"></span><span class="lis-flake--js" style="left: 91%; top: -320px; width: 0px; height: 5px;"></span><span class="lis-flake--js" style="left: 52%; top: -540px; width: 5px; height: 5px;"></span><span class="lis-flake--js" style="left: 73%; top: -150px; width: 3px; height: 1px;"></span><span class="lis-flake--js" style="left: 44%; top: -240px; width: 5px; height: 1px;"></span><span class="lis-flake--js" style="left: 25%; top: -610px; width: 4px; height: 5px;"></span><span class="lis-flake--js" style="left: 96%; top: -500px; width: 2px; height: 0px;"></span></div>
+
+
+<script src="assets/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08.js"></script>
+<script id="rendered-js">
+      $.letItSnow('.let-it-snow', {
+  stickyFlakes: 'lis-flake--js',
+  makeFlakes: true,
+  sticky: true });
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-36251023-1']);
+_gaq.push(['_setDomainName', 'jqueryscript.net']);
+_gaq.push(['_trackPageview']);
+
+(function () {
+  var ga = document.createElement('script');ga.type = 'text/javascript';ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);
+})();
+      //# sourceURL=pen.js
+    </script>
+
+
+</body></html>

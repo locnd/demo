@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+}
+.header1 {
+    background-color: black;
+}
+.header-content {
+    width: 1000px;
+    margin: 0 auto;
+    color: white;
+    padding: 5px 0;
+}
+.header-link {
+    display: inline-block;
+}
+.header-link a {
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    background-image: url("top-icon.png");
+    background-position: left 6px center;
+    background-repeat: no-repeat;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.header-search {
+    display: inline-block;
+    float: right;
+}
+.header-search-input {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 2px 5px;
+    margin-right: 5px;
+}
+.header2 {
+    background-color: #f0a52b;
+}
+.logo {
+    background-position: 0 0;
+    width: 157px;
+    height: 60px;
+    text-decoration: none;
+    background: url(icons.png);
+    background-repeat: no-repeat;
+    display: block;
+    margin: 10px 0;
+}
+.header3 {
+    background-color: #a70e1a;
+}
+.header-content li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+.header-content li a{
+    color: white;
+    text-decoration: none;
+}
+.header-content .home-icon{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    background: url(icons.png) -494px 0 no-repeat;
+    text-indent: -99999px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 999px) {
+    .header-content {
+        width: 100%;
+    }
+}
+.content-body {
+    width: 1000px;
+    margin: 0 auto;
+}
+.main {
+    width: calc(60% - 2px);
+    display: inline-block;
+}
+.right-sidebar {
+    width: calc(40% - 2px);
+    display: inline-block;
+    vertical-align: top;
+}
+.item {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.item-image, .item-content {
+    display: inline-block;
+}
+.item-image {
+    width: 260px;
+}
+.item-content {
+    width : calc(100% - 266px);
+    vertical-align: top;
+}
+.item-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.btn-delete-item {
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 999px) {
+    .content-body {
+        width: 100%;
+    }
+}

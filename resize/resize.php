@@ -1,11 +1,6 @@
 <?php
 
-$dir = 'picture';
-
-if (!is_dir('cover')) {
-    toFolder('cover');
-}
-resizeImagesInFolder($dir, 1);
+resizeImagesInFolder(dirname(__FILE__).'/from', 1);
 echo "Success.";
 
 function toFolder($dir) {
@@ -15,37 +10,73 @@ function toFolder($dir) {
     }
 }
 
+function getExtention($file) {
+    $parser = explode('.', $file);
+    return strtolower(end($parser));
+}
+function getFolderName($folder) {
+    $parser = explode('/', $folder);
+    return end($parser);
+}
+function moveFile($from, $to) {
+    rename($from, $to);
+    echo ' --- move ---> ' . str_replace(dirname(__FILE__).'/','',$to) . "\n"."<br>"."\n";
+}
 function resizeImagesInFolder($dir, $i) {
-    if (!is_dir('cover/' . $dir)) {
-        toFolder('cover/' . $dir);
+    $image = new SimpleImage();
+    $to_folder = str_replace('/from','/to', $dir);
+    if (!is_dir($to_folder)) {
+        toFolder($to_folder);
     }
-
     $files = scandir($dir);
+    $videoStt = 0;
+    $keepName = ['Coca', 'Tmp', 'Memory', 'Photos', 'ĐH Sư Phạm HN', 'Neolab 001', '2006-09-26'];
+    $videos = ['mp4', 'mkv', 'mov'];
+    $keepType = ['gif'];
     foreach ($files as $key => $file) {
         if ($file != '.' && $file != '..') {
-            if (!is_dir($dir . '/' . $file)) {
-                echo $dir . '/' . $file;
-                $image = new SimpleImage();
-                $image->load($dir . '/' . $file);
-                if ($image->getHeight() < $image->getWidth()) {
-                    $image->resizeToWidth(1920);
-                } else {
-                    $image->resizeToHeight(1920);
-                }
-                // $new = 'cover/' . $dir . '/'.$image->name;
-                if ($i < 10) {
-                    $new = 'cover/' . $dir . '/00' . $i . '.' . $image->type;
-                } elseif ($i < 100) {
-                    $new = 'cover/' . $dir . '/0' . $i . '.' . $image->type;
-                } else {
-                    $new = 'cover/' . $dir . '/' . $i . '.' . $image->type;
-                }
-                $image->save($new);
-                echo ' ---------> ' . $new . '<br>';
-                $i++;
-            } else {
+            $ext = getExtention($file);
+            if (is_dir($dir . '/' . $file)) {
                 resizeImagesInFolder($dir . '/' . $file, 1);
+                continue;
             }
+            echo str_replace(dirname(__FILE__).'/','',$dir . '/' . $file);
+            if ($i < 10) {
+                $new = $to_folder . '/00' . $i . '.' . $ext;
+            } elseif ($i < 100) {
+                $new = $to_folder . '/0' . $i . '.' . $ext;
+            } else {
+                $new = $to_folder . '/' . $i . '.' . $ext;
+            }
+            if (in_array($ext, $videos)) {
+                $videoStt++;
+                $new = $to_folder . '/video ' . $videoStt . '.' . $ext;
+                if ($videoStt < 10) {
+                    $new = $to_folder . '/video 0' . $videoStt . '.' . $ext;
+                }
+            }
+            if (in_array(getFolderName($dir), $keepName)) {
+                $new = $to_folder . '/' . $file;
+            }
+            if (in_array($ext, $videos) || in_array($ext, $keepType)) {
+                moveFile($dir . '/' . $file, $new);
+                $i++;
+                continue;
+            }
+            $image->load( $dir . '/' . $file);
+            if ($image->getHeight() <= 1920 || $image->getWidth() <= 1920) {
+                moveFile($dir . '/' . $file, $new);
+                $i++;
+                continue;
+            }
+            if ($image->getHeight() < $image->getWidth()) {
+                $image->resizeToWidth(1920);
+            } else {
+                $image->resizeToHeight(1920);
+            }
+            $image->save($new);
+            echo ' --- resize ---> ' . str_replace(dirname(__FILE__).'/','',$new) . "\n"."<br>"."\n";
+            $i++;
         }
     }
 }
